@@ -190,3 +190,36 @@ Processing by BlogController#index as HTML
 Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 3291)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 19:24:28 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blog/index.html.erb:3
+  Rendered blog/index.html.erb within layouts/application (Duration: 25.6ms | Allocations: 3752)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 6281)
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 13.1ms | Allocations: 7102)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 19:24:53 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blog/index.html.erb:3
+  Rendered blog/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 950)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3497)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 4319)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 19:25:13 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blog/index.html.erb:3
+  Rendered blog/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 950)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3524)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.3ms | Allocations: 4346)
+
+
