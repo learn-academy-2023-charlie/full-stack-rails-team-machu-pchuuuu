@@ -1,0 +1,225 @@
+  [1m[35m (168.3ms)[0m  [1m[35mCREATE DATABASE "blog_challenge_development" ENCODING = 'unicode'[0m
+  [1m[35m (44.1ms)[0m  [1m[35mCREATE DATABASE "blog_challenge_test" ENCODING = 'unicode'[0m
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1131589309581606540)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBlogs (20230524232048)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "title" character varying, "content" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230524232048"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-05-24 23:20:59.380146"], ["updated_at", "2023-05-24 23:20:59.380146"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1131589309581606540)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-05-24 18:21:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 634)
+Completed 200 OK in 17ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 7355)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-24 18:38:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 490)
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 4252)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-24 18:39:01 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 272)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 909)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-24 18:39:03 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 14)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 217)
+
+
+Started GET "/index" for 127.0.0.1 at 2023-05-24 18:39:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 18:40:15 -0500
+  
+ActionController::RoutingError (uninitialized constant BlogControllerController):
+  
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 18:41:41 -0500
+  
+ActionController::RoutingError (uninitialized constant BlogsController):
+  
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 18:41:42 -0500
+  
+ActionController::RoutingError (uninitialized constant BlogsController):
+  
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 18:44:26 -0500
+  
+ActionController::RoutingError (uninitialized constant BlogsController):
+  
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 18:44:26 -0500
+  
+ActionController::RoutingError (uninitialized constant BlogsController):
+  
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 18:46:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/blogs"):
+  
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 18:46:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/blogs"):
+  
+Started GET "/answer" for 127.0.0.1 at 2023-05-24 18:49:07 -0500
+Processing by BlogController#answer as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 10)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 680)
+
+
+Started GET "/answer" for 127.0.0.1 at 2023-05-24 18:51:54 -0500
+Processing by BlogController#answer as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 453)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 18:51:58 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 219.8ms | Allocations: 89617)
+Completed 200 OK in 230ms (Views: 221.2ms | ActiveRecord: 0.0ms | Allocations: 90921)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 18:52:12 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2681)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 3510)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 18:54:17 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  Rendered blog/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 13209)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 14646)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 18:54:23 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  [1m[36mBlog Load (11.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blog/index.html.erb:3
+  Rendered blog/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 884)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 3429)
+Completed 200 OK in 19ms (Views: 7.1ms | ActiveRecord: 11.0ms | Allocations: 4257)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 18:54:23 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blog/index.html.erb:3
+  Rendered blog/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 569)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2850)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.2ms | Allocations: 3120)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Create (4.4ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Kyloh"], ["content", "Fitness/Health"], ["created_at", "2023-05-25 00:01:08.842681"], ["updated_at", "2023-05-25 00:01:08.842681"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Create (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Henri"], ["content", "Media"], ["created_at", "2023-05-25 00:01:40.778055"], ["updated_at", "2023-05-25 00:01:40.778055"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 19:01:47 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blog/index.html.erb:3
+  Rendered blog/index.html.erb within layouts/application (Duration: 76.5ms | Allocations: 17491)
+  Rendered layout layouts/application.html.erb (Duration: 82.1ms | Allocations: 19764)
+Completed 200 OK in 85ms (Views: 83.0ms | ActiveRecord: 16.9ms | Allocations: 20034)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 19:03:19 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blog/index.html.erb:3
+  Rendered blog/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 1407)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 3954)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.5ms | Allocations: 4777)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 19:03:21 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blog/index.html.erb:3
+  Rendered blog/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 747)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3037)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 3314)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 19:03:22 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blog/index.html.erb:3
+  Rendered blog/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 742)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3020)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 3291)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 19:24:28 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blog/index.html.erb:3
+  Rendered blog/index.html.erb within layouts/application (Duration: 25.6ms | Allocations: 3752)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 6281)
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 13.1ms | Allocations: 7102)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 19:24:53 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blog/index.html.erb:3
+  Rendered blog/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 950)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3497)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 4319)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2023-05-24 19:25:13 -0500
+Processing by BlogController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering blog/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blog/index.html.erb:3
+  Rendered blog/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 950)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3524)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.3ms | Allocations: 4346)
+
+
